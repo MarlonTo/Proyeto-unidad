@@ -121,7 +121,8 @@ while True:
   GPIO.output(7,False) 
   time.sleep(1)
  
- create.withcode.uk(Identificar cuando una palabra es palíndromo) 
+ Raspberry 
+● Create.withcode.uk(Identificar cuando una palabra es palíndromo) 
 import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD) 
@@ -131,6 +132,42 @@ while True:
   time.sleep(1) 
   GPIO.output(7,False) 
   time.sleep(1)
+ 
+● Create.withcode.uk (Identificar cuando una palabra es palíndromo)
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD) 
+GPIO.setup(7, GPIO.OUT)
+
+def inversa (cadena):
+  invertida = ""
+  cont = len(cadena)
+  indice = -1
+  while cont  >= 1:
+    invertida+= cadena[indice]
+    indice = indice +(-1)
+    cont-=1
+  return invertida
+
+
+def es_palindromo (cadena): 
+  palabra_invertida = inversa(cadena) 
+  indice = 0
+  cont = 0
+  for i in range (len(cadena)):
+    if palabra_invertida[indice] == cadena[indice]:
+        indice+=  1
+        cont += 1
+    else :
+      GPIO.output(7,False) 
+      print ("No es palindromo") 
+      break
+
+  if cont == len(cadena):   
+    GPIO.output(7,True) 
+    print ("Es palindromo")   
+                           
+cadena = input ("Ingrese la palabra")
+es_palindromo(cadena)
 
 3.1 Arduino UNO (Funcionamiento de servomotores)
 //motor 1
@@ -466,7 +503,7 @@ La salida de la pantalla de micro: bit puede nos muestra palabras y números, as
 Como se puede observar usamos la configuración de los pines en tipo BOARD osea que usamos el GPIO4 pero como su configuración de pines en la tarjeta es el número 7, es por eso que se usa el número 7, lo demás como pueden ver es muy similar a la programación ya sea de Arduino o de Pic.
 
 8.6 create.withcode.uk (Identificar cuando una palabra es palíndromo)
-Se comienza con la declaración de variables y la cadena para los caracteres, luego pasamos a crear las condiciones para que comparar las variables y las cadenas de caracteres para saber si la cadena ingresada es igual a la inversa de la misma cadena.  
+Se comienza con la declaración de variables y la inclusión de librerías necesarias rar manejar el GPIO del raspberry. Definimos dos funciones, una que invierta la palabra y otra que identifica si la palabra es palindromo y por ultima hacemos las llamadas a las funciones. Se prende un led si
 
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
 ●	Se debe tener una cuenta en la plataforma de Tinkercad para poder utilizar sus servicios.
