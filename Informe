@@ -1,191 +1,520 @@
 # Informe
-Tutorial de Compute Engine: Virtual Machines (VMs) | Google Cloud, para generación de máquinas virtuales. 
+Producto unidad
+
+1.	PLANTEAMIENTO DEL PROBLEMA
+Actualmente existen varias plataformas de tarjetas de desarrollo, y algunas de ellas son de hardware y software libre. No obstante existen otras plataformas las cuales al mismo tiempo de ser de forma libre nos dan como servicio adicional el hecho de ser gratuitas. En este documento se trabajará con tres diferentes plataformas, las cuales se caracterizan por utilizar diferentes tarjetas de desarrollo como lo son a Raspberry Pi, Arduino Uno, Microbit. 
+2.	OBJETIVOS
+General:
+●	Implementar circuitos  con las tarjetas de desarrollo como la Raspberry Pi, Arduino Uno, Microbit; por medio de plataformas digitales.
+Específicos:
+●	Identificar los componentes electrónicos que componen las tarjetas de desarrollo Raspberry Pi, Arduino Uno, Microbit.
+●	Conocer las generalidades y funcionamiento de las  tarjetas de desarrollo Raspberry Pi, Arduino Uno, Microbit.
+●	Reconocer la escritura y sintaxis de las tarjetas de desarrollo Raspberry Pi, Arduino Uno, Microbit
+
+3.	ESTADO DEL ARTE
+Arduino
+Vidal-Silva, C., Lineros, M. I., Uribe, G. E., & Olmos, C. J. (2019). Electrónica para Todos con el Uso de Arduino: Experiencias Positivas en la Implementación de Soluciones Hardware-Software. Este trabajo presenta experiencias para con el desarrollo de proyectos Arduino, de estudiantes de Ingeniería Civil Informática de la Universidad Viña del Mar (ICI-UVM) en Chile, en un módulo (curso) de su proceso formativo. Las áreas de informática y electrónica usualmente consideran rumbos formativos diferentes sin presentar una clara hegemonía en el proceso de enseñanza, con un bajo desarrollo de competencias integradoras para la producción de soluciones que combinan hardware y software para el procesamiento de señales, lo que Arduino permite disminuir en alto grado. 
+Este trabajo destaca que, en tan sólo seis semanas, los estudiantes de Ingeniería Civil Informática de la Universidad Viña del Mar fueron capaces de desarrollar competencias para el uso de Arduino con el fin de implementar sistemas prototipo para la adquisición y visualización de variables ambientales. Esto es sólo una prueba de que la electrónica y la computación están más accesible para todos hoy en día, con bajas barreras de costo y aprendizaje. El trabajo se lo llevó a cabo en Viña del Mar - Chile.
+BBC Micro:bit
+Según Videnovik,2018 El BBC micro: bit  es un computadora codificables, diseñada para permitir que los niños sean creativos con tecnología. Permitedolos crear programas y aplicaciones de forma sencilla. Esto hace que la BBC micro: bit sea una herramienta creativa y fácil de comprender haciendo que  los estudiantes de primaria se apeguen y familiaricen con los conceptos de pensamiento algorítmico, codificación, programación, desarrollo de juegos y robótica.
+
+Raspberry Pi
 
 
-1. PLANTEAMIENTO DEL PROBLEMA
-
-Actualmente, debido al avance tecnologico e industrial, los ordenadores son un elemento indispensable para el ser humano ya sea en un ámbito
-personal como laboral, dichos equipos conocidos tambien como ordenadores,permiten realizar un sinnumero de actividades dependiendo el 
-próposito al que sea aplicado, sin embargo, dependidieno el trabajo un ordenador requerira de más rendimiento, el almacenamiento, la capacidad
-de memoria RAM, particion, entre otros, esto conlleva a un costo muy elevado (tanto de software como hardware) y no muchas personas al igual 
-que empresas tiene la disponibilidad de optimizar sus equipos, espo ello que nace la idea de desarrollar una computadora virtual, pero 
-¿Qué es una maquina virtual y como se crea una máquina virtual?. Para esto se utilizara la plataforma GoogleCloud
-
-2. OBJETIVOS
-- Objetivo general
-
-* Realizar un tutorial de como crear una maquina virtual utilizando la plataforma Google cloud: compute engine, analizando las ventajas y desventajas que posee junto con su  utilidad.
-
-- Objetivos especificos 
-
-* Analizar las ventajas y desventajas de una maquina virtual.
-* Explicar los usos  tienen las maquinas virtuales en la actualidad.
-* Mostrar el proceso de crear una maquina virtual a traves de la plataforma Google cloud: compute engine.
-
-3. ESTADO DEL ARTE
-Cloud Computing se vale del core de internet para ofrecer recursos software y hardware, a una gran gamma de usuarios finales, desde 
-organizaciones internacionales hasta personas del “común”. En este sentido y dada su propuesta de un modelo de gestión tecnológica que 
-cambia la forma tradicional en el aprovisionamiento y despliegue de infraestructura de redes y recursos hardware software; hacia una 
-nueva visión que "os convierte en servicios, cloud computing se ha posicionado en el mundo de las Tecnologías de la Información y las 
-Comunicaciones TIC´s como un nuevo paradigma que parece anunciar una larga estadía" (Navas,2013)
+4.	MARCO TEÓRICO
+1.Hardware
+Gracias a las nuevas plataformas que se han creado, los desarrolladores han podido manejar el desarrollo y diseño de distintos proyectos con una mayor rapidez y eficiencia en lo que son los diferentes procesos que estos conllevan. Actualmente la adquisición de dichas plataformas sea vuelto mucho más fácil y barato, al punto de llegar a utilizar algunas plataformas de manera gratuita.
+También en otro apartado de lo que se refiere hardware, los controladores como lo son los Arduinos Uno son los más utilizados por sus cualidades al momento de programarlos ya que su programación es estándar y eso ayuda a muchos desarrolladores al momento de generar interfaces para cualquier dispositivo.
+Tinkercar es una plataforma online brindada por Autodesk, una de sus principales características es el hecho de poder utilizarla de forma gratuita, antes de ello es esencial la creación de una cuenta de dicha plataforma. Existen varios servicios que nos provee la plataforma por el que se la conoce en todo el mundo principalmente es ser una herramienta para el diseño de piezas en 3D, pero en este documento nos centraremos en otro servicio que igualmente ofrece la plataforma es cual es la posibilidad de simular circuitos electrónicos como también el hecho de poder programar los mismos, especialmente en Arduino (Vidal-Silva, C., Lineros, M. I., Uribe, G. E., & Olmos, C. J. ,2019).
+Tinkercad unifica un lenguaje de programación estructurado y componentes electrónicos compatibles con Arduino para poder generar un ecosistema el cual sea ideal para la programación y creación de soluciones tecnológicas.
+Arduino UNO
+ARDUINO UNO es un microcontrolador el cual está basado en ATMega 328P. Tiene 14 entradas/salidas digitales, de las cuales 6 se pueden utilizar como salidas PWM (Modulación por ancho de pulsos) y otras 6 son entradas analógicas.Entre una de sus variadas características se destaca una biblioteca la cual sirve para poder controlar servomotores desde 0 y 180 ◦ . Los servos de rotación continua permiten varias velocidades de rotación de los ejes (Sánchez, 2012).
+Entre sus componentes electrónicos tenemos:
+1.	La placa tiene una entrada de corriente o de fuente de alimentación externa: permite su alimentación con una tensión que puede ir de 7 voltios a 12 voltios.
+2.	Puerto USB: desde este conector unimos nuestro circuito Arduino al ordenador, para ello necesitamos un cable que por un lado sea USB y  por el otro USB tipo AB, este cable suele ser el que se usan en las impresoras.
+3.	Fusible: es un componente de protección, en este caso protege el puerto USB de nuestro ordenador de un exceso de consumo por parte del Arduino.
+4.	Regulador de 5 voltios: es un pequeño circuito integrado encargado de disminuir la tensión de 7 voltios a 12 voltios
+5.	Interruptor de Reset: es el encargado de reiniciar o resetear el programa que se esta ejecutando en el Arduino cuando lo pulsamos.
+6.	Atmega 16, es el circuito integrado encargado de adaptar las señales del puerto USB a la MCU.
+7.	Cristales de cuarzo: el Arduino Uno tiene dos cristales de cuarzo uno para  el circuito Atmega 16 y otro  para la MCU ambos son de 16 mhz de frecuencia.
+8.	La MCU(microcontrolador) en el caso del Arduino Unos es el Atmega328p.
+9.	LED: cuando el pin tiene valor HIGH, el LED está encendido, cuando el pin está en LOW, está apagado.
 
 
-El estado del arte describe las investigaciones más recientes y actuales que sobre un tema en específico se han realizado. 
-La descripción  es un texto académico que expone sistemáticamente los avances existentes acerca de un tema y es de carácter más cualitativo, en el que se detallan los resultados y enfoques de las investigaciones en torno al tema que cada investigación ha abonado al tema de estudio de interés del investigador que elabora el estado del arte. La descripción gira en torno esencial a cuatro elementos: 
+ 
+Conectores de la tarjeta de Arduino UNO.
+ 
+1.	Terminal de referencia analógica (naranja)
+2.	Tierra digital (verde claro)
+3.	Terminales digitales 2-13 (verde)
+4.	Terminales digitales 0-1/ E/S serie – TX/RX (verde oscuro) – Estos pines no se pueden utilizar como e/s digitales (digitalRead() y digitalWrite()).Botón de reinicio – S1 (azul oscuro)
+5.	Programador serie en circuito «In-circuit Serial Programmer» o «ICSP» (azul celeste). Terminales de entrada analógica 0-5 (azul claro)
+6.	Terminales de alimentación y tierra (alimentación: naranja, tierras: naranja claro)
+7.	Entrada de alimentación externa (9-12VDC) – X1 (rosa)
+8.	Selector de alimentación externa o por USB – SV1 (púrpura). En las versiones nuevas de Arduino la selección de alimentación es automática por lo que puede que no tengas este selector.
+9.	USB (utilizado para subir programas a la placa y para comunicaciones serie entre la placa y el ordenador; puede utilizarse como alimentación de la placa) (amarillo)
+RASPBERRY PI
+Raspberry PI es una placa computadora (SBC) o Pc de placa única, de bajo precio, se podría expresar que es un ordenador de tamaño reducido, del orden de una tarjeta de crédito, desarrollado en el Reino Unido por la Fundación Raspberry PI (Universidad de Cambridge) en 2011, con el objetivo de estimular la enseñanza de la informática en las escuelas, aunque no empezó su comercialización hasta el año 2012. El concepto es el de un ordenador desnudo de todos los accesorios que se pueden eliminar sin que afecte al funcionamiento básico. Está formada por una placa que soporta varios componentes necesarios en un ordenador común y es capaz de comportarse como tal. A la Raspberry Pi la han definido como una maravilla en miniatura, que guarda en su interior un importante poder de cómputo en un tamaño muy reducido. Es capaz de realizar cosas extraordinarias(Yamanoor, Narasimha Saii,Yamanoor, 2013)
+Los componentes de la Raspberry Pi son:
+●	Un Chipset Broadcom BCM2835, que contiene un procesador central (CPU) ARM1176JZF-S a 700 MHz (el firmware incluye unos modos Turbo para que el usuario pueda hacerle overclock de hasta 1 GHz sin perder la garantía),
+●	Un procesador gráfico (GPU) VideoCore IV
+●	Un módulo de 512 MB de memoria RAM (aunque originalmente al ser lanzado eran 256 MB).
+●	Un conector de RJ45 conectado a un integrado lan9512 -jzx de SMSC que nos proporciona conectividad a 10/100 Mbps
+●	2 buses USB 2.0
+●	Una Salida analógica de audio estéreo por Jack de 3.5 mm.
+●	Salida digital de video + audio HDMI
+●	Salida analógica de video RCA
+●	Pines de entrada y salida de propósito general
+●	Conector de alimentación microUSB
+●	Lector de tarjetas SD
+(Yamanoor, Narasimha Saii,Yamanoor, 2013)
+ 
+BBC Micro:bit
+BBC micro: bit es una tarjeta pequeña programable con un tamaño de 4x5 cm, la cual está diseñada para aprender a programar de una manera fácil, divertido y que esté al alcance de todas las personas, posee una gran cantidad de sensores los cuales incorpora, sólo con la tarjeta se pueden desarrollar centenares de proyectos. La tarjeta BBC micro: bit también es aplicable para utilizarlo como una plataforma enfocado en el IoT (Internet of Things), realizandolo de una manera muy interesante para usuarios con conocimientos más avanzados. Algo que se puede destacar de BBC micro: bit es Open Source, es decir que tanto el hardware como el software de “micro:bit” es de código abierto, posee de un procesador Cortex-M0 y tiene flash no volátil de 256K  y 16K de RAM volátil. 
+.
+Al enfocarnos al hardware la tarjeta BBC micro: sus componentes son:
+-	25 diodos led: estos leds son programables, es decir, permiten mostrar un texto,numero e inclusive formar imágenes, se los puede programar individualmente, además, es un un sensor de luz debido a que pueden actuar como puertos de entrada para detectar la luz ambiente siendo.
+-	Botones: en la parte frontal de la tarjeta se puede encontrar dos botones catalogados como A y B, los cuales se los puede programar para poder ejecutarlos de forma individual o ejecutar acciones instantáneas,dependiendo la programación ingresada a la tarjeta.
+-	pines in/out:  dispone de 25 conectores, localizados en la parte inferior de la tarjeta, estos conectores permiten la programación de los motores, LEDs u otro componente externo.
+-	 Sensor de Temperatura: este sensor se encuentra integrado en la placa detectando la temperatura ambiente y analizándolo como grados Celsius.
+-	Acelerómetro: mide la aceleración de la placa, esta  se llega a activar cuando la tarjeta se mueve y también puede detectar otras acciones como agitarla, girarla inclusive, hasta soltarla en caída.
+-	Brújula: detecta el campo magnético permitiendo conocer la dirección en la que se localiza la tarjeta.
+-	Radio: permite la comunicación de tu placa BBC micro: bit con otras,un ejemplo es que se puede conectar todas las tarjetas que esté dentro de un aula y en una misma emisora pudiendo utilizarlas para enviar mensajes entre ellas.   
+-	Bluetooth: envía y recibe datos por medio de bluetooth logrado comunicarse de forma independiente e inalámbrica con computadoras,smartphones y dispositivos inteligentes.
+-	Puerto USB y conector para batería externa: la placa BBC micro: bit se la puede alimentar a través de el puerto USB, además, dispone de un conector especificado para pilas AAA o una batería.
+-	Alimentación: cuenta con un entrada de 3v,conector de batería y puerto USB para alimentar a la placa.
+nota: “Al igual que la placa arduino,esta placa almacena en su memoria un único programa que se ejecuta en cuanto recibe alimentación (ya que carece de un conmutador de encendido y apagado)(micro:es,2020).”
+ 
 
-* Quién? El investigador que desarrolló estudio. 
-* Cuándo? El año en que se publicaron los resultados del estudio. Aunque sabemos anticipadamente que el estudio debió de haber sido desarrollado con anterioridad mínima a un año generalmente.
-* ¿Qué? El objeto de estudio. Es aquí en donde se hace énfasis en la descripción. No solo se dice el objeto de estudio, sino el enfoque, los resultados de la investigación. 
-* ¿Dónde? El lugar en donde se realizó la investigación. Este es un dato de referencia con varios propósitos: uno es para organizar la información de lo macro a micro (de carácter internacional, nacional o local); otro propósito es para saber la manera de establecer contacto con el autor de la investigación si así fuera el deseo del investigador que realiza el estado del arte; por ejemplo si es de la localidad puede contactarlo de manera directa y cara a cara, si no tendrá que establecer contacto por otros medios, ahora tenemos al alcance los medios electrónicos para ello que recortan el tiempo de la retroalimentación de un mensaje. 
+2. Software 
 
-4. MARCO TEÓRICO 
+Tinkercad
+Tinkercad es una plataforma de diseño de circuitos en línea gratuito, diseño en 3D y como plataforma de impresión 3D desarrollada y administrada por AUTODESK. Se lo utiliza para diseñar y simular circuitos electrónicos.
+Tinkercad también permite generar el código C / C ++, por bloques, texto o mixta. Ésta última muestra las dos opciones (bloques y texto) simultáneamente. Pero comunmentes se suele utilizar el código del mismo Arduino UNO. Para programar un Arduino, el lenguaje estándar es C++, aunque es posible programarlo en otros lenguajes. No es un C++ puro sino que es una adaptación que proveniente de avr-libc que provee de una librería de C de alta calidad para usar con GCC en los microcontroladores AVR de Atmel y muchas funciones específicas para los MCU AVR de Atmel.
 
-Una máquina virtual (MV) se lo puede definir como un ordenador que utiliza unicamente software, emulando virtualmente los componentes del 
-hardaware como: el disco duro, la memoria RAM, tarejtas de red, tajetas gráfica, etc. Dicha máquina se la puede ejecutar como una aplicación 
-y no afecta al sistema operativo que posea el ordenador en donde se ejecutara, por lo tanto estas máquinas virtuales son compatibles con 
-todos los ordenadores, una carcteristica peculiar de las MV es que puedes crear el hardware de acuerdo a tus especificaciones o requerimientos;
-además se pude recrear entornos de red, conectando asi varias maquinas virtuales siendo muy utilizados en el campo de informatica como medida 
-para la detección de virus utilzando como "conejillo de indias" a las MV, para cuando un archivo de fuente desconocida llegue al nuestro 
-ordenador lo podamos ejecutar en la maquina virtual, verificando si se trata de un virus o no.
+create.withcode.uk
+Esta página web es una herramienta gratuita que te permite escribir, ejecutar, depurar y compartir programas de Python en tu navegador web.
+No necesita descargar ni instalar nada. Los programas de Python no pueden acceder a sus archivos o dañar su computadora, por lo que es una forma segura de aprender a crear con código.
+●	Python
+Python es un lenguaje basado en texto que es muy utilizado en ámbitos educativos e incluso por programadores profesionales,el editor en línea de python permite programar las funciones que nos ofrece nuestra placa, como realizar imágenes, utilizar los botones,gestos,acelerómetro,brújula, sensor,control de temperatura e incluso escuchar música.
 
-Actualemnte las maquinas virtuales se diferencian por su funcionalidad obteniendo: las MV de sistemas y las MV de proceso. La máquina virtual 
-de sistemas como se mencionó anteriormente emula aun un ordenador, logrando ejecutarse otro sistema operativo aparte del S.O propio del 
-ordenador, el PC funciona unicamente como host o anfitrión es decir el dispositivo en donde se ejeuta el programa, para el S.O virtual 
-todo funciona como si fuera un PC fisico, inclusive se puede crear otra máquina virtual dentro de la anterior MV. 
-Por otro lado las máquinas virtuales de proceso ejecutan un un proceso conreto al igual que una aplicacion unicamente para ser ejecutado
+BBC Micro:bit
+Al momento de programar utilizando la placa BBC micro: bit se tiene varias plataformas como: python,make code y scratch.
+●	Scratch
+Es un lenguaje de programación que sirve para la creación de historias interactivas, juegos y animaciones, podemos encontrar una serie de objetos y acciones los cuales al combinarse se puede conseguir que los objetos reaccionen de una manera determinada por el usuario,dichas acciones tienen forma de un rompecabezas. las acciones y comportamientos están divididos en categorías las cuales son: movimiento,apariencia,sonido,Lapiz,datos 
+●	Make code
+Este editor está empleado para personas que desconocen del tema de programación, en esta plataforma podemos encontrar al editor de bloque. por medio bloques de colores los usuarios pueden compilar y unir unos con otros  para la elaboración de programas, 
+●	Python
+Python es un lenguaje basado en texto que es muy utilizado en ámbitos educativos e incluso por programadores profesionales,el editor en línea de python permite programar las funciones que nos ofrece nuestra placa, como realizar imágenes, utilizar los botones,gestos,acelerómetro,brújula, sensor,control de temperatura e incluso escuchar música.
 
-existen diferentes plataformas en donde poder crear una MV, en este caso utilizaremos Google Cloud Plataform (GCP), es una platafomra que consta 
-de un "conjunto de recursos físicos como computadoras y unidades de disco duro,y virtuales como las máquinas virtuales (MV) que se encuentran 
-en los centros de datos de Google de todo el mundo" (Google,2020) GCP ofrece una  diversidad de servicios, en esta ocasion para la creación de la  
-máquina virtual se utilizará Compute engine un servicio de cloud computing que suministra MV localizados en los centros de Google; incluyen 
-almacenamiento en discos persistentes que proporcionan espacio un almacenamiento directo, seguro y consta, brindando un rendimiento uniforme.
-Estas máquinas virtuales se inician de una manera muy rapida permitiendo personalizarlas segun las necesidades del usuario, algo que se debe
-tener en cuenta es que Google cloud no es gratis, es una plataforma que tiene un coste es decir, pagas por obtener dichos servicio, por lo que
-debes en cuenta el enfoque de tu máquina virtual.
+3. Programación 
+create.withcode.uk(Uso de la configuración de los pines GPIO)
+import RPi.GPIO as GPIO
+import time
 
-la plataforma de Gogle Coud tiene grandes beneficios cuando nos referimos a las ma´quinas virtuales, como se mencionó anteriormente posee una red 
-global rapida y confiable, la infraestructura brinda una defensa mediante capas de protección encriptando toda la información de manera automática 
-"Las identidades, los usuarios y los servicios se autentican de forma segura con varios factores. Protegemos el acceso a los datos sensibles con 
-herramientas avanzadas, como las llaves de seguridad a prueba de suplantación de identidad (phishing)."(GoogleCloud2020); los centros de datos de 
-GCP tiene las instalaciones mejor aseguradas con una buena eficiencia energética. tra de las ventajas es que no necesia de una infraestructura 
-propia, debido a que google utiliza su base de datos se puede acceder por medio de la plataforma Google; tiene un bajo coste pagando unicamente 
-los recursos con los que se va a trabajar,además, ofrece una serie de descuentos dependendo de lo que el usuario necesite. es una plataforma de 
-alta confienza utilizada por varias PYMEs como "Minka, BotMaker,Properati,Mercado Libre, entre otras."(GoogleCloud,2020).
+GPIO.setmode(GPIO.BOARD) 
+GPIO.setup(7, GPIO.OUT)
 
-Por otra parte, a diferencia de otras platafrmas como AWS o Azure,Google cloud no posee tantos cebtros globales como los anteriormentes señealados
-según la empresa consultora y de investigación de las tecnologías de la información Gartner.inc señalo "clientes suelen elegir a Google como 
-proveedor secundario en lugar de un proveedor estratégico; aunque es cada vez más elegido como alternativa estratégica a AWS por los clientes 
-cuyas empresas compiten con Amazon".(Powerdata,2019).Por lo tanto, google Cloud Plataformn posee una baja coste de sus servicios pero carece 
-centros  de almacenamento como las dos plataformas anteriormente mencionadas,  siendo esto algo importante al momento de       desarrolar una  MV.
+while True:
+  GPIO.output(7, True) 
+  time.sleep(1) 
+  GPIO.output(7,False) 
+  time.sleep(1)
+ 
+ create.withcode.uk(Identificar cuando una palabra es palíndromo) 
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BOARD) 
+GPIO.setup(7, GPIO.OUT)
+while True:
+  GPIO.output(7, True) 
+  time.sleep(1) 
+  GPIO.output(7,False) 
+  time.sleep(1)
 
-Este punto requiere que el estudiante realice una amplia consulta bibliográfica sobre el tema de su trabajo.
+3.1 Arduino UNO (Funcionamiento de servomotores)
+//motor 1
+int enablepin_1 = 11; //activa los pines 1 y 2
+int in1A = 2;//entrada 1_1
+int in2A = 3;//entrada 1_2
+//motor 2
+int enablepin_2 = 10;//activa los pines 3 e 4
+int in1B = 4;//entrada 2_2
+int in2B = 5;//entrada 2_1
 
-Se describe la teoría o conjunto teórico apropiado con la cual el investigador enfrenta su proyecto y la realidad dentro del cual se ubica el problema de investigación, incluye:
-* Describir la actual relación entre el problema enunciado y el sistema o sistemas teóricos/conceptuales que pueden guiarlo.
-* Dejar claramente especificada la relación entre la teoría que guía la investigación y la realidad que se percibe como problema de investigación.
-* Conceptualizar el problema en la forma de un modelo, útil para clarificar los conceptos y relaciones conceptuales.
-* Señalar la forma en que la investigación actual enriquece, amplía y profundiza el conocimiento teórico, sustantivo y metodológico acumulado en estudios previos.
+void setup(){
+  pinMode(enablepin_1, OUTPUT);
+  pinMode(in1A, OUTPUT);
+  pinMode(in2A, OUTPUT);
+  
+  pinMode(enablepin_2, OUTPUT);
+  pinMode(in1B, OUTPUT);
+  pinMode(in2B, OUTPUT);
+  
+  digitalWrite(enablepin_1, LOW);//inicia com motor 1 
+  digitalWrite(enablepin_2, LOW);//inicia com motor 2 
+}
 
-Para su desarrollo debe evitarse en lo posible redactar párrafos continuos de texto, para lo cual se debe utilizar  mentefactos, cuadro comparativos, esquemas o mapas conceptuales
+void loop(){
+//Frente
+  digitalWrite(enablepin_1, HIGH);//motor 1 al frente
+  digitalWrite(in1A, LOW);
+  digitalWrite(in2A, HIGH);
+  
+  digitalWrite(enablepin_2, HIGH);//motor 2 alfrente
+  digitalWrite(in1B, LOW);
+  digitalWrite(in2B, HIGH);
+  delay(5000);
+  
+  
+}
 
-5. DIAGRAMAS
-Como se puede modificar en la imagen las máquinas virtuales constan de una extensión para la migración en la informática, una puerta NAT y un almacenamiento en la nube.
+ 
+
+3.2 Arduino UNO (JUEGO DE REPETICIÓN)
+const int latchPin=9 ;  //Salida conectada al pin 12 del 74HC595 (Latch)
+const int dataPin=8  ;  //Salida conectada al pin 14 del 74HC595 (Data)
+const int clockPin=10 ;  //Salida conectada al pin 11 del 74HC595 (Clock)*/
+/*
+    Los bits 0 son los encendidos
+        --8--
+        |   |
+        3   7
+        |   |
+        --2--
+        |   |
+        4   6
+        |   |
+        --5--  .1
+*/
+byte const numbers[10] = {
+    0b11000000, //0
+    0b11111001, //1
+    0b10100100,	//2
+    0b10110000, //3
+    0b10011001, //4
+    0b10010010, //5
+    0b10000011, //6
+    0b11111000, //7
+    0b10000000, //8
+    0b10011000  //9
+};
+const int   zumbador= 7;
+const int  	btnR=  A0;
+const int   btnV= A1;
+const int   btnAm = A2;
+const int   btnAz=  A3;
+const int   ledR=   2;
+const int   ledV=   3;
+const int   ledAm =  4;
+const int   ledAz =  5;
+
+int melodia[ ] = {262, 196, 196, 220, 196, 0, 247, 262};
+int duracionNotas[] = {4, 8, 8, 4, 4, 4, 4, 4};
+int nivelActual = 1;
+int velocidad = 500;
+const int NIVEL_MAX = 100;
+int secuencia[NIVEL_MAX];
+int secuenciaUsuario[NIVEL_MAX];
+
+void setup(){
+   pinMode(btnR, INPUT);
+   pinMode(btnV, INPUT);
+   pinMode(btnAm, INPUT);
+   pinMode(btnAz, INPUT);
+   pinMode(ledR, OUTPUT);
+   pinMode(ledV, OUTPUT);
+   pinMode(ledAm, OUTPUT);
+   pinMode(ledAz, OUTPUT);
+   digitalWrite(ledR, LOW);
+   digitalWrite(ledV, LOW);
+   digitalWrite(ledAm, LOW);
+   digitalWrite(ledAz, LOW);
+  //Display de 7 segmentos
+   pinMode(dataPin, OUTPUT);
+   pinMode(latchPin, OUTPUT);
+   pinMode(clockPin, OUTPUT);
+}
+
+void loop(){
+ 
+   if(nivelActual == 1){
+      mostrarNivel(nivelActual);
+      generaSecuencia();
+      muestraSecuencia();
+      leeSecuencia();
+     
+     
+   }
+   if(nivelActual != 1){
+      mostrarNivel(nivelActual);
+      muestraSecuencia();
+      leeSecuencia();
+    
+   }
+   
+}
+
+void muestraSecuencia(){
+   digitalWrite(ledR, LOW);
+   digitalWrite(ledV, LOW);
+   digitalWrite(ledAm, LOW);
+   digitalWrite(ledAz, LOW);
+   for(int i = 0; i < nivelActual; i++){
+      if( secuencia[i] == ledR ){
+         tone(zumbador, 200);
+         delay(200);
+         noTone(zumbador);
+      }
+      if( secuencia[i] == ledV ){
+         tone(zumbador, 300);
+         delay(200);
+         noTone(zumbador);
+      }
+      if( secuencia[i] == ledAm ){
+         tone(zumbador, 400);
+         delay(200);
+         noTone(zumbador);
+      }
+      if( secuencia[i] == ledAz ){
+         tone(zumbador, 500);
+         delay(200);
+         noTone(zumbador);
+      }
+      digitalWrite(secuencia[i], HIGH);
+      delay(velocidad);
+      digitalWrite(secuencia[i], LOW);
+      delay(200);
+   }
+}
+
+void leeSecuencia(){
+   int flag = 0;
+   for(int i = 0; i < nivelActual; i++){
+      flag = 0;
+      while(flag == 0){
+         if(digitalRead(btnAz) == LOW){
+            digitalWrite(ledAz, HIGH);
+            tone(zumbador, 500);
+            delay(300);
+            noTone(zumbador);
+            secuenciaUsuario[i] = ledAz;
+            flag = 1;
+            delay(200);
+            if(secuenciaUsuario[i] != secuencia[i]){
+               secuenciaError();
+               return;
+            }
+            digitalWrite(ledAz, LOW);
+         }
+         if(digitalRead(btnAm) == LOW){
+            digitalWrite(ledAm, HIGH);
+            tone(zumbador, 400);
+            delay(300);
+            noTone(zumbador);
+            secuenciaUsuario[i] = ledAm;
+            flag = 1;
+            delay(200);
+            if(secuenciaUsuario[i] != secuencia[i]){
+               secuenciaError();
+               return;
+            }
+            digitalWrite(ledAm, LOW);
+         }
+         if(digitalRead(btnV) == LOW){
+            digitalWrite(ledV, HIGH);
+            tone(zumbador, 300);
+            delay(300);
+            noTone(zumbador);
+            secuenciaUsuario[i] = ledV;
+            flag = 1;
+            delay(200);
+            if(secuenciaUsuario[i] != secuencia[i]){
+               secuenciaError();
+               return;
+            }
+            digitalWrite(ledV, LOW);
+         }
+         if(digitalRead(btnR) == LOW){
+            digitalWrite(ledR, HIGH);
+            tone(zumbador, 200);
+            delay(300);
+            noTone(zumbador);
+            secuenciaUsuario[i] = ledR;
+            flag = 1;
+            delay(200);
+            if(secuenciaUsuario[i] != secuencia[i]){
+               secuenciaError();
+               return;
+            }
+            digitalWrite(ledR, LOW);
+         }
+      }
+   }
+   secuenciaCorrecta();
+}
+
+void generaSecuencia(){
+   randomSeed(millis());
+   for(int i = 0; i < NIVEL_MAX; i++){
+      secuencia[i] = random(2,6);
+   }
+}
+
+void melodiaError(){
+   for(int i = 0; i < 8; i++){
+      int duracionNota = 1000/duracionNotas[i];
+      tone(zumbador, melodia[i],duracionNota);
+      int pausaEntreNotas = duracionNota * 1.30;
+      delay(pausaEntreNotas);
+      noTone(zumbador);
+     if(i%2==0){
+         digitalWrite(ledR, HIGH);
+         digitalWrite(ledV, HIGH);
+         digitalWrite(ledAm, HIGH);
+         digitalWrite(ledAz, HIGH);
+     }else{
+         digitalWrite(ledR, LOW);
+         digitalWrite(ledV, LOW);
+         digitalWrite(ledAm, LOW);
+         digitalWrite(ledAz, LOW);
+     }
+   }
+}
+
+void secuenciaError(){
+   melodiaError();
+   delay(1000);
+   nivelActual = 1;
+   velocidad = 500;
+}
+
+void secuenciaCorrecta(){
+   if(nivelActual < NIVEL_MAX);
+      nivelActual++;
+  if(velocidad!=50)velocidad -= 50;
+  
+   delay(200);
+}
 
 
-6. LISTA DE COMPONENTES
-En esta ocasión el unico programa que se emple fue la plataforma Google Cloud, la opcion de Google Engine debido a que, en dicha plataforma
-esta todos los elemento que vamos a utilizar para la elaboración de la máquina virtual.
-7. MAPA DE VARIABLES
+void mostrarNivel(byte num)
+{
 
-Este punto hace referencia a las variables que se emplean dentro de un programa, las cuales deben ser indicadas en la captura de una pantalla si son componentes visuales o especificados en una taba sin no son visibles en una interface. Se debe hacer referencia al tipo y la función que desempeñan en la aplicación.
+    byte digit1 = num / 10;
+    byte digit2 = num - (digit1 * 10);
+
+    digitalWrite(latchPin, LOW);
+    shiftOut(dataPin, clockPin, MSBFIRST, numbers[digit2]);
+    shiftOut(dataPin, clockPin, MSBFIRST, numbers[digit1]);
+    digitalWrite(latchPin, HIGH);
+}
+
+ 
 
 
+
+
+
+BCC MICRO: BIT
+Dados gráficos
+ 
+
+Cartel animado
+  
+
+
+
+
+
+
+5.	DIAGRAMAS
+ 
+ 
+Esquemático del Arduino UNO
+
+6.	LISTA DE COMPONENTES
+●	Computador
+●	Plataforma Tinkercad
+●	Plataforma Create with Code
+●	pl
+
+7.	MAPA DE VARIABLES
+7.1 Arduino UNO (Funcionamiento de servomotores)
+ 
+7.2 Arduino UNO (JUEGO DE REPETICIÓN)
+ 
+ 
+7.3 Dados gráficos
+Variables: numero, 1, 2, 3,4,5
+7.4 cartel animado
+variables: prueba,icono 1, icono 2
+
+8.	EXPLICACIÓN DEL CÓDIGO FUENTE
+8.1 Arduino UNO (Funcionamiento de servomotores)
+Para este proyecto además de tener los servomotores y el Arduino UNO es importante el circuito integrado L293D o también conocido como puente H, este circuito integrado nos ayudará en el manejo de los dos servomotores.
+Se comienza declarando variables, ente caso habilitaremos el pin 11, la  entrada 2 y 3 para el servomotor 1, mientras que para el servomotor habilitaremos el pin 10, la entrada 4 y la 5. A continuación determinamos que para los pin antes mencionados se los vuelve salidas y tambien los pines 11 y 10 se los ponen en LOW.
+Para que el servo motores valla adelante se vuelve a modificar los valores haciendo que el pin 11 y 10 ahora estén alto y por medio de “delay” ajustamos la velocidad.
+8.2 Arduino UNO (JUEGO DE REPETICIÓN)
+Comenzamos declarando las variables las cuales serán nuestros pinea a utilizar, determinamos las características que debe tener nuestro  sensor piezoeléctrico, luego modificamos los parámetros de los pines para poder tenerlos ya sean como entradas o salidas. A Continuación por medio de la sintaxis for, if y while creamos una serie de condiciones para poder decirle al programa lo que tiene que hacer cuando el usuario acierta las repeticiones como cuando no lo logre que vuelva a comenzar desde el inicio.
+8.3 BBC micro:bit (dados gráficos)
+Este proyecto utiliza la entrada del acelerómetro para activar la creación de un número aleatorio entre 1 y 6 y mostrarlo en la salida de la pantalla de diodos LED , para obtener los números al azar se agita el micro: bit. En lugar de mostrar un número, este programa utiliza la selección para mostrar puntos en la pantalla simulando a los puntos de cada cara de los datos reales, dependiendo de qué número aleatorio se generó.
+
+8.4 BBC micro:bit (Cartel animado )
+La salida de la pantalla de micro: bit puede nos muestra palabras y números, así como imágenes. A través de este programa desplazamos el texto por la pantalla para que las personas sepan su lo que el usuario escribió en este caso la palabra “Prueba” seguida de una imagen animada. gracias a un bucle infinito la secuencia se mantiene hasta que desconecte el micro: bit de su medio de alimentación sea batería o cable USB. 
+8.5 create.withcode.uk (Uso de la configuración de los pines GPIO)
+Como se puede observar usamos la configuración de los pines en tipo BOARD osea que usamos el GPIO4 pero como su configuración de pines en la tarjeta es el número 7, es por eso que se usa el número 7, lo demás como pueden ver es muy similar a la programación ya sea de Arduino o de Pic.
+
+8.6 create.withcode.uk (Identificar cuando una palabra es palíndromo)
+Se comienza con la declaración de variables y la cadena para los caracteres, luego pasamos a crear las condiciones para que comparar las variables y las cadenas de caracteres para saber si la cadena ingresada es igual a la inversa de la misma cadena.  
 
 9.- DESCRIPCIÓN DE PRERREQUISITOS Y CONFIGURACIÓN
-Como paso principal se requiere tener una cuenta en Google para poder luego crearnos una misma cuenta pero ya en Google Cloud Platform la cual con ayudara a tener el servicio de creación de nuestra máquina virtual.
-Luego de haber creado nuestro nuestra cuenta, el sistema nos redirigirá a nuestra página principal , en ella encontraremos a nuestro lado izquierdo una serie de opciones, escogeremos la opción de App Engine y luego la opción de Instancias de VM
+●	Se debe tener una cuenta en la plataforma de Tinkercad para poder utilizar sus servicios.
+BBC micro:bit
+●	micro: bit (o simulador MakeCode)
+●	MakeCode o editor de Python (En esta ocasión se escogió MakeCode)
+create.withcode.uk
+●	simulador 
+●	Conocimientos de programación en lenguaje Python
 
- 
-    Fig 1.4- Opción de App Engine de  la Plataforma de Google 
-
-Una vez ya en nuestra página para crear nuestra máquina virtual nos aparecerá varias aspectos que tendrá nuestra máquina virtual según nuestra necesidades o requerimientos.
-
- 
-      Fig 1.5- Opciones para la creación de la máquina virtual
-
-Como primer item a llenar es el nombre de nuestra máquina virtual, luego tenemos la ubicación en donde residirá nuestra máquina virtual, podemos encontrar las regiones el la figura 1.2. 
-
-En el siguiente iten tenemos la elección de nuestra procesador, las opciones van desde un procesador de 1 núcleo con una memoria de 0.6 GB de RAM, hasta un procesador de hasta 96 núcleos con una memoria de 360 GB de RAM.
-
-La siguiente opción es el disco duro  o bien un disco de estado sólido el cual se lo denomina como SSD, y el sistema Operativo el cual correrá en nuestra máquina virtual, en este trabajo se eligió el Sistema operativo Debian GNU/Linux 10 con un disco estándar de 10 GB.
-
-Para finalizar tenemos las opciones de tráfico de red las cuales elegimos, estas son el tráfico de HTTP, mientras que la segunda en el tráfico de HTTPS. Una vez ya seleccionados aplastaremos el botón de crear para que el sistema ya comienzan con la creación de nuestra máquina virtual.
-
-      
-V.	ARRANQUE DE LA MÁQUINA VIRTUAL
-Cuando la plataforma haya acabado de crear nuestra máquina virtual, procederemos ha abrirla, encontraremos a nuestra máquina virtual en la opción Instancias de VM que está en la parte superior izquierda de nuestra pantalla. 
-Luego procederemos a elegir como queremos abrirla, en este caso se escoge la opción “Abrir en otra ventana del navegador”, de esta manera la plataforma por si sola comienza a cargar nuestra máquina virtual sin ningún tipo de aplicación externa.
-
- 
- Fig 1.7- Formato de selección de carga de VM’s
-
-
-
-10. APORTACIONES
-
-* Tener en cuenta el proposito al que se le va a designar la maquina virtual: este debido a que en Google Cloud la cantidad de almacenamiento 
-esta relacionada con el precio es decir que mientras mas almacenamiento se desee mas va a costar.
-
-propia, debido a que google utiliza su base de datos se puede acceder por medio de la plataforma Google; tiene un bajo cost
-
+10.	APORTACIONES
 En este punto se indicará todo lo adicional fruto de lo investigado que se haya agregado al trabajo.
+El nombre de BBC micro:bit proviene de una “colaboración entre la BBC y varias compañías tecnológicas para enseñar a niños -y, sobre todo, niñas- de Reino Unido a programar.”(Kelion.2016) esto nacio como forma de un proyecto educativo y llego a ser tan exitoso que se piensa  vender la máquina en todo el mundo.
+Create with Code No necesita descargar ni instalar nada. Los programas de Python no pueden acceder a sus archivos o dañar su computadora, por lo que es una forma segura de aprender a crear con código.
+
+11.	CONCLUSIONES
+●	Las plataformas digitales se convierte en una gran herramienta las cuales nos ayudan a poder diseñar nuestros circuitos, en el caso de no poder conseguir alguno de ellos. Y como complemento se vuelve muy útil a la hora de guardar nuestros proyectos que por otro lado tendríamos que desarmar nuestro circuito para diseñar uno nuevo.
+●	Se pudo apreciar que BBC micro:bit es una plataforma de formación y aprendizaje para aquellos que desean entrar al mundo de programación,esta plataforma cuenta con varios lenguajes en los cuales se puede programar como son Python,Scratch y MakeCode, en esta ocasión se utilizó el último por dos motivos: mostrar la simulación del programa ya realizado, y mostrar la forma de programar por bloques, debido a que es fácil de apreciar y comprender para una persona que aún no sabe programar. 
+●	Hemos descubierto que el Raspberry es un pequeño pero gran ordenador que es capaz de realizar todas las tareas necesarias para que el estudiante, de un forma práctica y sin miedo a romper un aparato muy costoso, pueda aprender fundamentos de computación.
+●	La pagina web create.withcode.uk es facil de utilizar y muy intuitiva al momento de manejarla, esto también ayuda en la creación de cualquier programa sin necesidad de descargarte una aplicación. 
+
+12.	RECOMENDACIONES
+●	Se recomienda tener por adelantado conocimientos sobre la programación en Arduino, ya que en varias ocasiones se necesita saber principalmente la sintaxis de las variables las cuales están predeterminadas para cada declaración. 
+●	Si no se tiene conocimientos avanzados al momento de programar y se desea utilizar BBC micro: bit se recomienda utilizar MakeupCode al momento de programar, ya que este editor nos muestra nuestro codigo de programacion en forma de bloque coloreados siendo más comprensible para un usuario que recien esta empezando. 
+●	Lo que se puede recomendar es que para el uso de Raspberry Pi necesitas conocimientos previos, tanto como de programar un código, hasta el de instalar un sistema operativo.
+
+13.	CRONOGRAMA
+
+ 
+14.	BIBLIOGRAFÍA
+●	Sánchez, E. (2012). Diseño de un sistema de control domótico basado en la plataforma Arduino. Master's thesis. Escuela Técnica Superior de Ingeniería Informática. Universidad Politécnica de Valencia.
+●	C. Vidal, C. Cabezas, J. Parra y L. López, (S.F.) “Experiencias prácticas con el uso del lenguaje de programación Scratch para desarrollar el pensamiento algorítmico de estudiantes en Chile " Formación Universitaria, vol. 8, págs. 23–32, 2015. [En línea]. Disponible: http://www.redalyc.org/articulo.oa?id=373544191001
+●	 European-Schoolnet, (2015) Calculando nuestro futuro: programación informática y Codificación de prioridades, programas escolares e iniciativas en toda Europa. Bruselas, Bélgica.
+●	Vidal-Silva, C., Lineros, M. I., Uribe, G. E., & Olmos, C. J. (2019). Electrónica para Todos con el Uso de Arduino: Experiencias Positivas en la Implementación de Soluciones Hardware-Software. Información tecnológica, 30(6), 377-386.
+●	T. Ball et al ., "Microsoft Touch Develop y la BBC micro: bit", 2016 38a Conferencia Internacional IEEE / ACM sobre Software Engineering Companion (ICSE-C) , Austin, TX, 2016, pp. 637-640.
+●	Yamanoor, Narasimha Saii,Yamanoor, S. (2013, December 18). RASPBERRY PI – Historia de la Informática. https://histinf.blogs.upv.es/2013/12/18/raspberry-pi/
 
 
-11. CONCLUSIONES
-
-En conclusión, , una máquina virtual tambien conocidad como virtual machine (VM) es un ordenador desarrollado unicamente de software el cual se lo
-puede ejecutar en cualquier maquina u ordenador fisico, sin que la VM afecte al sistema operatvo de dicho PC, Google Cloud es una plataforma
-en la que a través de la opcion Compute engine permite la creacion de  la MV , el procedimiento, es sencillo de comprender y facil de aplicar
-siguiento los pasos realizados en la seccion de "DESCRIPCION" , ademas, las maquinas virtuales proporcionadas por GCP son gratuitas (aunue sean 
-los elementos mas basicos), sus aplicaciónes en la vida pueden ser utilizados en ciber seguridad como medidas de proteccion para detección de virus,
-o, por otra parte, empleado en megicios como Mercado libre  en donde se necesita un ma yor cantida de soportes para sus bases de datos.
-
-En la actualidad los servicios de cloud comuting están cambiando principalmente la forma en la cual las empresas interactúan con sus consumidores y
- con sus empresas asociadas, pero el cloud computing no solo es para empresas también son para personas común y corrientes que quieran realizar una 
-gran cantidad de operaciones o tareas.
-
-El servicio  de la creación de máquinas virtuales en Google Cloud Platform es muy intuitivo y no demora mucho la creación de la máquina virtual. 
-El hecho que otorgar un presupuesto por un año también es de apreciar, como también las estimaciones del cobro por los servicios de la plataforma, 
-todo esto en tiempo real.
+15.	ANEXOS
+15.1 MANUAL DE USUARIO
+Tinkercad
+●	Crearnos una cuenta de usuario y acceder. Seleccionando la opción “Circuits” podremos empezar a crear nuestros circuitos clicando sobre “Create new Circuit”: 
+●	A Continuación se nos redirigirá a otra ventana la cual nos desplegará a nuestro lado derecho una serie de opciones “Basic” y “All”, según queramos componentes elementales o de uso más común como pulsadores, LEDs, resistencias fijas, potenciómetros, baterías, transistores, placas de prototipado etc. u opciones más avanzadas como circuitos integrados, osciloscopios, control remoto o tiras de LEDs. 
+●	Una vez montado el circuito con una placa controladora Arduino, podremos escribir el código. Para ello, habrá que clicar sobre el icono “Code” y se optará por la opción de programación por bloques, texto o mixta. Ésta última muestra las dos opciones (bloques y texto) simultáneamente. 
+●	Escribimos el programa para la placa controladora (en la imagen, un semáforo sencillo) y a continuación podemos simular el circuito eligiendo la opción “Start Simulation” 
 
 
-12. RECOMENDACIONES
 
-Tras la elaboración de la máquina virtual se obtuvo las siguientes recomendaciones
-* Tener en cuenta el proposito al que se le va a designar la maquina virtual: este debido a que en Google Cloud la cantidad de almacenamiento 
-esta relacionada con el precio es decir que mientras mas almacenamiento se desee mas va a costar.
-*Mantener el sistema actualizado: tener en la MV las ultimas actualizadciones del sistema operativo, mejorando la seguridad y reduciendo
-la exposicion ante vectores de ataque tratados  por los fabricantes en parches de actualización.
+ 
 
-
-13. CRONOGRAMA
-
-El estudiante detalla cada una de las tareas y actividades que va a ejecutar durante el desarrollo de su trabajo. Este cronograma debe representarse gráficamente mediante un   “DIAGRAMA DE GANTT”, el cual de ser desarrollado con MICROSOFT PROJECT.
-
-![](https://github.com/doalulema/Informe/blob/master/img/Diagrama5.jpg)
-
-14. BIBLIOGRAFÍA
-
-beservices. (05 de 11 de 2018). besrvices. Obtenido de https://www.beservices.es/google-cloud-platform-que-es-n-5349-es?fbclid=IwAR2J87Yt2KzYpa5HfQdi0Haoo2iTBAXEsAfTOVodDhZbt1oRFoWhjFekKkw
-Cloudnube. (s.f.). cloudnube. Obtenido de https://sites.google.com/site/aranube/ventajas-y-desventajas-de-cloud-computing
-ENAE. (10 de 06 de 2010). ENAE. Obtenido de https://www.enae.es/blog/ventajas-y-desventajas-del-cloud-computing?action#gref
-GoogleCloud. (06 de 2012). youtube. Obtenido de https://www.youtube.com/watch?v=0-sF5ZWB_FY&fbclid=IwAR0Ynpt0kae0BfzrWydzcjmNzWu97nc0AF3kccC81jkD3Q00oA8X_0mjUjw
-GoogleCloud. (2020). GoogleCloud. Obtenido de Google cloud: https://cloud.google.com/?&utm_source=google&utm_medium=cpc&utm_campaign=latam-LATAM-all-es-dr-bkws-all-all-trial-e-dr-1008075-LUAC0010197&utm_content=text-ad-none-none-DEV_c-CRE_382276148618-ADGP_BKWS+%7C+Multi+~+Google+Cloud-KWID_43700047166266644-kwd-3
-Interpolados. (14 de 05 de 2018). Interpolados. Obtenido de https://interpolados.wordpress.com/2018/05/14/google-compute-engine/?fbclid=IwAR0wPmgXFewi0bzI6SsPXP4umR37bSvSyMm63aVR17L_8F6p9S7E8hVsS7c
-PowerData. (25 de 06 de 2016). PowerData. Obtenido de PowerData: https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/google-cloud-vs-aws.-comparativa-pros-y-contras?fbclid=IwAR1p1Q024m6reE_u7UldBuYCmCXTNyQI5ZgX1djKP5XnQ9uDxMY8ovwy8rg
-RAMÍREZ, I. (26 de 07 de 2016). xataka. Obtenido de https://www.xataka.com/especiales/maquinas-virtuales-que-son-como-funcionan-y-como-utilizarlas?fbclid=IwAR1p1Q024m6reE_u7UldBuYCmCXTNyQI5ZgX1djKP5XnQ9uDxMY8ovwy8rg
-Ruben Andres. (31 de 05 de 2017). Computerhoy. Obtenido de Computerhoy: https://computerhoy.com/noticias/software/que-es-maquina-virtual-como-funciona-que-sirve-46606?fbclid=IwAR3QGFEqqAELpztTTY4wvorbj19BvE1VabwPubJPNyTl0Wv-FCUJ7Xn5UMA
-
-15. ANEXOS
-(los anexos e imagenes utilizadas en el informe se encuentran en la carpeta images)
 
